@@ -1,0 +1,24 @@
+{
+  "name": "lorem",
+  "version": "0.0.1",
+  "description": "The best lorem ipsum generator ever",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thibault/lorem.git"
+  },
+  "author": "Thibault Jouannic <thibault@miximum.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thibault/lorem/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}
