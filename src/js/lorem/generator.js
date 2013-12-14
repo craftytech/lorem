@@ -1,4 +1,7 @@
 define(function() {
+    var prefix = 'Lorem ipsum dolor sit amet. ';
+
+    // Random words used to dynamically generate latin words
     var lorem_words = [ 'aenean', 'aliquam', 'cras', 'cum', 'curabitur',
         'curae', 'donec', 'duis', 'etiam', 'fusce', 'in', 'integer',
         'interdum', 'lorem', 'maecenas', 'mauris', 'morbi', 'nam', 'nulla',
@@ -97,6 +100,9 @@ define(function() {
                 var paragraph = generateParagraph();
                 paragraphs.push(paragraph);
             }
+
+            // Always start by "Lorem ipsum..."
+            paragraphs[0] = prefix + paragraphs[0];
 
             return paragraphs;
         }
