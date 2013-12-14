@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>The best Lorem Ipsum generator</title>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <script data-main="js/main" src="js/require.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-6" id="text"></div>
             <div class="col-md-2" id="control">
-                <form>
+                <form action="#" method="GET">
                     <label for="p">P:</label>
                     <input name="p" id="p" type="text" pattern="\d+" />
                     <label for="w">W:</label>
@@ -20,6 +20,5 @@
             </div>
         </div>
     </div>
-    <script src="../build/lorem.min.js"></script>
 </body>
 </html>
