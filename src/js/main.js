@@ -1,16 +1,9 @@
-requirejs.config({
-    baseUrl: './js',
-    paths: {
-        'd3': 'libs/d3'
-    },
-    shim: {
-        d3: {
-            exports: 'd3'
-        }
-    }
-});
+var generator = generator || {};
+var ui = ui || {};
 
-define(['lorem/generator', 'lorem/ui'], function(generator, ui) {
+(function(generator, ui) {
+    "use strict";
+
     var nb_paragraphs = 5;
     var nb_words = 25;
 
@@ -33,4 +26,4 @@ define(['lorem/generator', 'lorem/ui'], function(generator, ui) {
         nb_words  = parseInt(this.value, 10);
         showParagraphs();
     });
-});
+})(generator, ui);

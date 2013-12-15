@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>The best Lorem Ipsum generator</title>
+
+    <!-- build:css css/lorem.css -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
-    <script data-main="js/main" src="js/require.js"></script>
+    <!-- endbuild -->>
 </head>
 <body>
     <div class="container">
@@ -20,5 +23,12 @@
             </div>
         </div>
     </div>
+
+    <!-- build:js js/lorem.js -->
+    <script src="js/libs/d3.js"></script>
+    <script src="js/lorem/generator.js"></script>
+    <script src="js/lorem/ui.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

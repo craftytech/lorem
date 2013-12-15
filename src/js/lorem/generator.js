@@ -1,4 +1,6 @@
-define(function() {
+var generator = (function() {
+    "use strict";
+
     var prefix = 'Lorem ipsum dolor sit amet. ';
 
     // Random words used to dynamically generate latin words
@@ -107,4 +109,4 @@ define(function() {
             return paragraphs;
         }
     };
-});
+})();

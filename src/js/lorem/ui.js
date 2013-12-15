@@ -1,4 +1,7 @@
-define(['d3'], function(d3) {
+var d3 = d3 || {};
+
+var ui = (function(d3) {
+    "use strict";
 
     return {
         /**
@@ -18,4 +21,4 @@ define(['d3'], function(d3) {
             paragraphs.exit().remove();
         }
     };
-});
+})(d3);
