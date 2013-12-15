@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             }
         },
         requirejs: {
-            compile: {
+            js: {
                 options: {
                     appDir: "src/js",
                     baseUrl: ".",
