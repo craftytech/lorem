@@ -30,27 +30,27 @@ define(function() {
         'tempus', 'tincidunt', 'tortor', 'tristique', 'turpis', 'ullamcorper',
         'ultrices', 'ultricies', 'urna', 'ut', 'varius', 'vehicula', 'vel',
         'velit', 'venenatis', 'vestibulum', 'vitae', 'viverra', 'volutpat',
-        'vulputate']
+        'vulputate'];
 
-    var words = {'min': 3, 'max': 8}
-    var sections = {'min': 2, 'max': 4}
-    var sentences = {'min': 4, 'max': 6}
+    var words = {'min': 3, 'max': 8};
+    var sections = {'min': 2, 'max': 4};
+    var sentences = {'min': 4, 'max': 6};
 
     var getRandom = function(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
-    }
+    };
 
     var getRandomNbWords = function() {
-        return getRandom(words['min'], words['max']);
-    }
+        return getRandom(words.min, words.max);
+    };
 
     var getRandomNbSections = function() {
-        return getRandom(sections['min'], sections['max']);
-    }
+        return getRandom(sections.min, sections.max);
+    };
 
     var getRandomNbSentences = function() {
-        return getRandom(sentences['min'], sentences['max']);
-    }
+        return getRandom(sentences.min, sentences.max);
+    };
 
     var generateSection = function() {
         var nb_words = getRandomNbWords();
@@ -61,7 +61,7 @@ define(function() {
         }
 
         return words.join(' ');
-    }
+    };
 
     var generateSentence = function() {
         var nb_sections = getRandomNbSections();
@@ -71,9 +71,9 @@ define(function() {
             sections.push(section);
         }
 
-        sentence = sections.join(', ') + '.';
+        var sentence = sections.join(', ') + '.';
         return sentence.charAt(0).toUpperCase() + sentence.slice(1);
-    }
+    };
 
     var generateParagraph = function() {
         var nb_sentences = getRandomNbSentences();
@@ -84,7 +84,7 @@ define(function() {
         }
 
         return sentences.join(' ');
-    }
+    };
 
     return {
 
@@ -106,5 +106,5 @@ define(function() {
 
             return paragraphs;
         }
-    }
+    };
 });

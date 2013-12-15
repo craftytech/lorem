@@ -3,13 +3,10 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        uglify: {
+        jshint: {
+            files: ['Gruntfile.js', 'src/js/main.js', 'src/js/lorem/*.js'],
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                jshintrc: 'jshintrc.json'
             }
         },
         requirejs: {
@@ -30,14 +27,14 @@ module.exports = function(grunt) {
         }
     });
 
-    // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    // Checking js code quality
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     // Use r.js to optimize assets loading
     grunt.loadNpmTasks('grunt-contrib-requirejs');
 
+
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
-    //grunt.registerTask('reguirejs', ['requirejs']);
+    grunt.registerTask('default', ['jshint', 'requirejs']);
 
 };
