@@ -16,10 +16,26 @@
 
             <div class="col-sm-2" id="control">
                 <form action="#" method="GET">
-                    <label for="p">P:</label>
-                    <input name="p" id="p" type="text" pattern="\d+" />
-                    <label for="w">W:</label>
-                    <input name="w" id="w" type="text" pattern="\d+" />
+                    <select name="p" id="p">
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option selected="selected" value="5">5</option>
+                        <option value="8">8</option>
+                        <option value="13">13</option>
+                        <option value="21">21</option>
+                        <option value="34">34</option>
+                    </select>
+                    <label for="p">Paragraphs</label>
+                    <br />
+                    <div id="w">
+                        <span>Size:</span><br />
+                        <input type="radio" name="w" id="w_1" value="0.5" />
+                        <label for="w_1">w</label> <br />
+                        <input type="radio" name="w" id="w_2" value="1" checked="checked" />
+                        <label for="w_2">ww</label> <br />
+                        <input type="radio" name="w" id="w_3" value="2" />
+                        <label for="w_3">www</label>
+                    </div>
                 </form>
             </div>
         </div>

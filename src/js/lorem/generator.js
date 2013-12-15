@@ -50,8 +50,8 @@ var generator = (function() {
         return getRandom(sections.min, sections.max);
     };
 
-    var getRandomNbSentences = function() {
-        return getRandom(sentences.min, sentences.max);
+    var getRandomNbSentences = function(p_size) {
+        return getRandom(sentences.min * p_size, sentences.max * p_size);
     };
 
     var generateSection = function() {
@@ -77,8 +77,8 @@ var generator = (function() {
         return sentence.charAt(0).toUpperCase() + sentence.slice(1);
     };
 
-    var generateParagraph = function() {
-        var nb_sentences = getRandomNbSentences();
+    var generateParagraph = function(p_size) {
+        var nb_sentences = getRandomNbSentences(p_size);
         var sentences = [];
         for (var i = 0 ; i < nb_sentences ; i++) {
             var sentence = generateSentence();
@@ -95,11 +95,11 @@ var generator = (function() {
          *
          * Returns an array of strings.
          */
-        generateParagraphs: function(nb_paragraphs) {
+        generateParagraphs: function(nb_paragraphs, p_size) {
             var paragraphs = [];
 
             for (var i = 0 ; i < nb_paragraphs ; i++) {
-                var paragraph = generateParagraph();
+                var paragraph = generateParagraph(p_size);
                 paragraphs.push(paragraph);
             }
 
